@@ -3,13 +3,13 @@ library(magrittr)
 spp.prob.2017 <- gsub('_', ' ', spp.prob.2017, fixed = T)
 
 vars.productivity <- c('biomass.monocultures',
-                                        'NDVI',
-                                        'GNDVI',
-                                        'GDVI2',
-                                        'NIR',
-                                        'REG',
-                                        'RED',
-                                        'GRE')
+                                        'NDVI.CI',
+                                        'GNDVI.CI',
+                                        'GDVI2.CI',
+                                        'NIR.CI',
+                                        'REG.CI',
+                                        'RED.CI',
+                                        'GRE.CI')
 labels.productivity <- c('Biomass',
                               'NDVI',
                               'GNDVI',
