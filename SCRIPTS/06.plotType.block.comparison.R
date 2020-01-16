@@ -184,4 +184,6 @@ bioAOV$p.value
 
 # mean of block a vs mean of blocks b-f
 mean(prairie.use.other$AHOR_cm[which(prairie.use.other$block == "A")])
+std.error(prairie.use.other$AHOR_cm[which(prairie.use.other$block == "A")])
 mean(prairie.use.other$AHOR_cm[which(prairie.use.other$block != "A")])
+std.error(prairie.use.other$AHOR_cm[which(prairie.use.other$block != "A")])
