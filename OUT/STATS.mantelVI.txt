@@ -5,12 +5,12 @@ Mantel statistic based on Pearson's product-moment correlation
 Call:
 mantel(xdis = dist(vi.pca.scher$x[, 1:2]), ydis = dist(vi.pca.schweiger$x[,      1:2]), method = "pearson") 
 
-Mantel statistic r: 0.005717 
-      Significance: 0.443 
+Mantel statistic r: 0.005696 
+      Significance: 0.429 
 
 Upper quantiles of permutations (null model):
   90%   95% 97.5%   99% 
-0.253 0.366 0.446 0.487 
+0.252 0.326 0.393 0.437 
 Permutation: free
 Number of permutations: 999
 
@@ -26,7 +26,7 @@ Mantel statistic r: 0.6599
 
 Upper quantiles of permutations (null model):
   90%   95% 97.5%   99% 
-0.153 0.202 0.277 0.329 
+0.154 0.198 0.277 0.338 
 Permutation: free
 Number of permutations: 999
 
@@ -38,11 +38,11 @@ Call:
 mantel(xdis = as.dist(cophenetic(tr.prairie.biomassPlot)[spp.schw$broad,      spp.schw$broad]), ydis = dist(all.prairie.mean[gsub(" ",      "_", spp.schw$broad), "NDVI"]), method = "pearson") 
 
 Mantel statistic r: 0.1055 
-      Significance: 0.204 
+      Significance: 0.23 
 
 Upper quantiles of permutations (null model):
   90%   95% 97.5%   99% 
-0.208 0.258 0.291 0.320 
+0.227 0.264 0.302 0.362 
 Permutation: free
 Number of permutations: 999
 
@@ -54,38 +54,11 @@ Call:
 mantel(xdis = as.dist(cophenetic(tr.prairie.biomassPlot)[spp.schw$broad,      spp.schw$broad]), ydis = dist(all.prairie.mean[gsub(" ",      "_", spp.schw$broad), "biomass.all"]), method = "pearson") 
 
 Mantel statistic r: 0.4476 
-      Significance: 0.004 
+      Significance: 0.001 
 
 Upper quantiles of permutations (null model):
   90%   95% 97.5%   99% 
-0.206 0.273 0.310 0.354 
+0.205 0.276 0.301 0.324 
 Permutation: free
 Number of permutations: 999
 
-         checking for file 'C:\Users\clane_897q3pb\AppData\Local\Temp\Rtmp4YVTTn\remotes2a98695e79c\vqv-ggbiplot-7325e88/DESCRIPTION' ...  v  checking for file 'C:\Users\clane_897q3pb\AppData\Local\Temp\Rtmp4YVTTn\remotes2a98695e79c\vqv-ggbiplot-7325e88/DESCRIPTION' (680ms)
-      -  preparing 'ggbiplot':
-   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
-      -  checking for LF line-endings in source and make files and shell scripts
-  -  checking for empty or unneeded directories
-  -  looking to see if a 'data/datalist' file should be added
-      -  building 'ggbiplot_0.55.tar.gz'
-     
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-package ‘magic’ successfully unpacked and MD5 sums checked
-package ‘lpSolve’ successfully unpacked and MD5 sums checked
-package ‘linprog’ successfully unpacked and MD5 sums checked
-package ‘RcppProgress’ successfully unpacked and MD5 sums checked
-package ‘ade4’ successfully unpacked and MD5 sums checked
-package ‘geometry’ successfully unpacked and MD5 sums checked
-package ‘FD’ successfully unpacked and MD5 sums checked
-package ‘latex2exp’ successfully unpacked and MD5 sums checked
-
-The downloaded binary packages are in
-	C:\Users\clane_897q3pb\AppData\Local\Temp\Rtmp4YVTTn\downloaded_packages
-[1] 4
-[1] "NoFlowerAll"

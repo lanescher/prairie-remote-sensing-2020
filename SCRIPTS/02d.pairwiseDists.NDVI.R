@@ -63,7 +63,7 @@ spp.schw <- list(
 
 ## compare our data with schweiger; source = https://ecosis.org/#result/6b3feb89-bf62-4003-8f03-73341a4c4033
 vi.pca.scher <- prcomp(all.prairie.mean[gsub(" ", "_", spp.schw$broad),
-                                       c('NIR','REG','RED','GRE')],
+                                       c('NIR.CI','REG.CI','RED.CI','GRE.CI')],
                         scale = TRUE)
 vi.pca.schweiger <- prcomp(dat.schweiger[spp.schw$codes.broad, ], scale = TRUE)
 
@@ -92,4 +92,4 @@ print('-----------------------MANTEL TEST, dist(SCHER NDVI) vs phylo------------
 print(vi.phylo.mantel)
 print('-----------------------MANTEL TEST, dist(biomass) vs phylo-----------------------')
 print(vi.biomass.mantel)
-#unlink('../OUT/STATS.mantelVI.txt')
+unlink('../OUT/STATS.mantelVI.txt')
