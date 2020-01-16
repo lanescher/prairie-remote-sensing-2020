@@ -29,15 +29,8 @@ colnames(bioMono) <- c("species", "plot 1", "plot 2")
 
 # treatments
 
-biomass.raw <- dat$biomass.raw
-rownames(biomass.raw) <- 1:nrow(biomass.raw)
-inds <- biomass.raw$type
-tmtInd <- inds == "Plug" | inds == ""
-tmtInd <- rownames(biomass.raw$plot[which(biomass.raw$type == "Plug")])
-
 tmt <- biomass.raw[which(biomass.raw$type == "Plug" |
                            biomass.raw$type == ""),]
-tmt <- tmt[-which(tmt$species == "CONTROL"),]
 keep <- c(seq(1, nrow(tmt), by = 4), seq(2, nrow(tmt), by = 4))
 keep <- sort(keep)
 

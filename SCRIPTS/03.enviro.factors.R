@@ -30,6 +30,6 @@ gg.pca.envir <- ggbiplot(pca.envir, obs.scale = 1, var.scale = 1,
                          ellipse = TRUE,
                          circle = FALSE) + scale_color_discrete(name = 'Block')
 
-pdf('../OUT/pca.environmental.factors.pdf')
+pdf('../OUT/FIGURE.pca.environmental.factors.pdf')
 print(gg.pca.envir)
 dev.off()

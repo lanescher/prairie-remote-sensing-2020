@@ -2,10 +2,7 @@
 ## v1: ahipp 2018-04-12
 ## v2: atuffin, sometime in May
 ## v3: ahipp, 2018-07-12. Edits include:
-  ## -- removing all species excluded from 2017 analysis - DONE
-  ## -- cleaning code - DONE
-  ## -- add tip labels - DONE
-  ## -- coloring major clades? - DONE
+
 
 library(ape)
 library(ggtree)

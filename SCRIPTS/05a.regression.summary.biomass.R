@@ -24,7 +24,7 @@ groups <- list(scaled,
             scaled[which(scaled$flower == 0),],
             scaled[which(scaled$Plot.category == "Monoculture" &
                            scaled$flower == 0),])
-namesL <- c("all", "mono", "tmt", "NFall", "NFmono")
+namesL <- c("all", "mono", "tmt", "NoFlowerAll", "NoFlowerMono")
 
 ### DO NORMAL REGRESSIONS ----
 

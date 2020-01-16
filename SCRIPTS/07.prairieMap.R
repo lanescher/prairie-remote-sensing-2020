@@ -5,7 +5,7 @@ library(ggplot2)
 ndvi <- raster("C:/Users/clane_897q3pb/Documents/projects/prairie/tiffs_final/NDVI.tif")
 
 # aggregate
-ndviAgg <- aggregate(ndvi,fact=100,fun=mean)
+#ndviAgg <- aggregate(ndvi,fact=100,fun=mean)
 ndviAgg10 <- aggregate(ndvi,fact=10,fun=mean)
 
 # convert to df
@@ -19,9 +19,7 @@ colScale <- c("blue", "blue",
               "green", "springgreen4")
 
 # plot
-jpeg("../OUT/FIGURE.map.jpg", width = 702, height = 440)
-
-ggplot(ndviAgg_df, aes(x = ndviAgg_df$x,
+tmp <- ggplot(ndviAgg_df, aes(x = ndviAgg_df$x,
                        y = ndviAgg_df$y,
                        fill = ndviAgg_df$value)) +
   geom_tile() +
@@ -37,6 +35,7 @@ ggplot(ndviAgg_df, aes(x = ndviAgg_df$x,
         axis.title.y=element_blank(),
         axis.text.y=element_blank(),
         axis.ticks.y=element_blank())
+ggsave(tmp, file = "../OUT/FIGURE.map.jpg")
 
-dev.off()
+
 

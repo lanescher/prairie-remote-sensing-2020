@@ -20,7 +20,7 @@ groups <- list(scaled,
                scaled[which(scaled$flower == 0),],
                scaled[which(scaled$Plot.category == "Monoculture" &
                               scaled$flower == 0),])
-namesL <- c("all", "mono", "tmt", "NFall", "NFmono")
+namesL <- c("all", "mono", "tmt", "NoFlowerAll", "NoFlowerMono")
 coverType <- c("dcover")
 
 ### NORMAL REGRESSION ----
@@ -118,7 +118,7 @@ for (k in 1:length(coverType)) {
     assign(paste0(x = "full-", namesL[j], coverType[k]), value = full)
     
     # save as csv
-    write.csv(full, paste0("../OUT/TABLE.cover.regression.", namesL[j], ".", coverType[k],".csv"))
+    write.csv(full, paste0("../OUT/TABLE.cover.regression.", namesL[j], ".csv"))
     
   }
   
@@ -227,7 +227,7 @@ for (k in 1:length(coverType)) {
     assign(paste0(x = "full-", namesL[j], coverType[k]), value = full)
     
     # save as csv
-    write.csv(full, paste0("../OUT/TABLE.cover.mixedRegression.", namesL[j], ".", coverType[k],".csv"))
+    write.csv(full, paste0("../OUT/TABLE.cover.mixedRegression.", namesL[j], ".csv"))
     
   }
   
@@ -237,8 +237,8 @@ for (k in 1:length(coverType)) {
 for (j in 1:length(namesL)) {
   ### read in .csv files to find avg increase in AIC from adding block
   
-  noBlock <- read.csv(paste0("../OUT/TABLE.cover.regression.", namesL[j], ".dcover.csv"))
-  block <- read.csv(paste0("../OUT/TABLE.cover.mixedRegression.", namesL[j], ".dcover.csv"))
+  noBlock <- read.csv(paste0("../OUT/TABLE.cover.regression.", namesL[j], ".csv"))
+  block <- read.csv(paste0("../OUT/TABLE.cover.mixedRegression.", namesL[j], ".csv"))
   
   noBlock$model <- NA
   noBlock$model[which(noBlock$volume == "-")] <- paste0(noBlock$VI.used[which(noBlock$volume == "-")],

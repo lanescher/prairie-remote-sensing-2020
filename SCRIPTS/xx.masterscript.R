@@ -1,6 +1,5 @@
-##### remove VIvariance.R
-#### 999.gheatmap.mod.R ????
-
+##### remove VIvariance.R ???
+##### remove 02d ???
 
 # Lane Scher
 # clanescher@gmail.com
@@ -15,16 +14,16 @@
 #                                          #
 ############################################
 
-source('../SCRIPTS/00a.readBiomass.R') # good
-source('../SCRIPTS/00b.compileData.R') # needs header/contact info
-source('../SCRIPTS/00c.readTree-v3.R') # good
-source('../SCRIPTS/00d.problemSpp.2017.R') # good
-source('../SCRIPTS/00e.readData.traits.R') # needs header/contact info
+source('../SCRIPTS/00a.readBiomass.R') 
+source('../SCRIPTS/00b.compileData.R') 
+source('../SCRIPTS/00c.readTree-v3.R')
+source('../SCRIPTS/00d.problemSpp.2017.R')
+source('../SCRIPTS/00e.readData.traits.R')
 allRS <- read.csv("../DATA/allRS.csv") 
 
 # The following file calls local files that are not on GitHub. Only
 # run this file if there are new rasters to analyze
-#source('../SCRIPTS/00f.tif.analysis.R') only if there is new tif data
+#source('../SCRIPTS/00f.tif.analysis.R') 
 
 
 ############################################
@@ -72,7 +71,6 @@ source("../SCRIPTS/06.plotType.block.comparison.R")
 source("../SCRIPTS/07.prairieMap.R")
 
 # make supplementary tables with biomass for all plots
-source("../08.biomassSupplementaryTables.R")
+source("../SCRIPTS/08.biomassSupplementaryTables.R")
 
-# ISSUE not sure what this does
-source("../SCRIPTS/999.gheatmap.mod.R")
+

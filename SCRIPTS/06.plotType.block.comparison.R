@@ -61,7 +61,7 @@ for (i in 1:length(vari)) {
 }
 
 
-write.csv(outTab, file = "../OUT/TABLE.Summary.Stats.nonParametric.csv")
+write.csv(outTab, file = "../OUT/TABLE.SummaryStats.csv")
 
 # make boxplots
 
@@ -141,8 +141,7 @@ MV <- ggplot(data = prairie.use.other,
   ylim(c(0, 4))
 
 # format and save figure
-jpeg("../OUT/FIGURE.boxplots.jpg", width = 550, height = 700)
-ggarrange(MB, BB,
+tmp <- ggarrange(MB, BB,
           MC, BC,
           MN, BN,
           MV, BV,
@@ -150,7 +149,9 @@ ggarrange(MB, BB,
           ncol = 2, nrow = 4,
           align = "hv",
           label.x = 0, label.y = 1)
-dev.off()
+ggsave(tmp, file = "../OUT/FIGURE.boxplots.jpg",
+       width = 15, height = 21, units = "cm")
+
 
 # compare VIs
 

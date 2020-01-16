@@ -1,7 +1,7 @@
 library("qpcR")
 
 
-namesL <- c("all", "mono", "tmt", "NFall", "NFmono")
+namesL <- c("all", "mono", "tmt", "NoFlowerAll", "NoFlowerMono")
 
 scoresAllBio <- list()
 scoresAllBioMixed <- list()
@@ -16,7 +16,7 @@ VIs <- c( "GDVI2", "NDVI", "GRE.CI", "REG.CI", "GNDVI", "REG",
 
 #### biomass fixed effects models ####
 for (j in 1:length(namesL)) {
-  tmp <- read.csv(paste0("C:/Users/clane_897q3pb/Documents/GitHub/prairie-biomass-2018/OUT/TABLE.biomass.regression.", namesL[j], ".csv"))
+  tmp <- read.csv(paste0("../OUT/TABLE.biomass.regression.", namesL[j], ".csv"))
   tmp <- tmp[,-1]
   
   tmp$AICweight <- akaike.weights(tmp$AIC)[[3]]
@@ -62,7 +62,7 @@ for (j in 1:length(namesL)) {
 
 #### biomass mixed effects models ####
 for (j in 1:length(namesL)) {
-  tmp <- read.csv(paste0("C:/Users/clane_897q3pb/Documents/GitHub/prairie-biomass-2018/OUT/TABLE.biomass.mixedRegression.", namesL[j], ".csv"))
+  tmp <- read.csv(paste0("../OUT/TABLE.biomass.mixedRegression.", namesL[j], ".csv"))
   tmp <- tmp[,-1]
   
   tmp$AICweight <- akaike.weights(tmp$AIC)[[3]]
@@ -106,7 +106,7 @@ for (j in 1:length(namesL)) {
 
 #### cover fixed effects models ####
 for (j in 1:length(namesL)) {
-  tmp <- read.csv(paste0("C:/Users/clane_897q3pb/Documents/GitHub/prairie-biomass-2018/OUT/TABLE.cover.regression.", namesL[j], ".dcover.csv"))
+  tmp <- read.csv(paste0("../OUT/TABLE.cover.regression.", namesL[j], ".csv"))
   tmp <- tmp[,-1]
   
   tmp$AICweight <- akaike.weights(tmp$AIC)[[3]]
@@ -141,7 +141,7 @@ for (j in 1:length(namesL)) {
 
 #### cover mixed effects models ####
 for (j in 1:length(namesL)) {
-  tmp <- read.csv(paste0("C:/Users/clane_897q3pb/Documents/GitHub/prairie-biomass-2018/OUT/TABLE.cover.mixedRegression.", namesL[j], ".dcover.csv"))
+  tmp <- read.csv(paste0("../OUT/TABLE.cover.mixedRegression.", namesL[j], ".csv"))
   tmp <- tmp[,-1]
   
   tmp$AICweight <- akaike.weights(tmp$AIC)[[3]]
