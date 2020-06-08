@@ -61,10 +61,11 @@ dev.off()
 #}
 
 dat.traits.cor <- data.frame(
-  NDVI = cor(all.prairie.ordi$NDVI, all.prairie.ordi[, labels.traits.continuous])[1, ],
+  Volume = cor(all.prairie.ordi$NDVI, all.prairie.ordi[, labels.traits.continuous])[1, ],
   Biomass = cor(all.prairie.ordi$Biomass, all.prairie.ordi[, labels.traits.continuous])[1, ],
   lambda = prairie.phylosignal[labels.traits.continuous, 'lambda']
   )
+rownames(dat.traits.cor)[3] <- "Specific leaf area"
 
 p <- ggplot(dat.traits.cor, aes(x = NDVI, y = Biomass))
 #p <- p + geom_abline(intercept = 0, slope= 1, lwd = 0.5, lty = 'dashed')

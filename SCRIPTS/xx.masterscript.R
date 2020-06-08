@@ -1,6 +1,3 @@
-##### remove VIvariance.R ???
-##### remove 02d ???
-
 # Lane Scher
 # clanescher@gmail.com
 # 01/15/2020
