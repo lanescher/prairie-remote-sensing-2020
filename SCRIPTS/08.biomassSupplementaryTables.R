@@ -28,6 +28,8 @@ colnames(bioMono) <- c("species", "plot 1", "plot 2")
 
 
 # treatments
+biomass.raw <- read.csv("../DATA/Biomass_Datasheet-2018-12-14v2-AHedit.tsv",
+                        sep = "\t")
 
 tmt <- biomass.raw[which(biomass.raw$type == "Plug" |
                            biomass.raw$type == ""),]
