@@ -61,7 +61,7 @@ dev.off()
 #}
 
 dat.traits.cor <- data.frame(
-  Volume = cor(all.prairie.ordi$NDVI, all.prairie.ordi[, labels.traits.continuous])[1, ],
+  NDVI = cor(all.prairie.ordi$NDVI, all.prairie.ordi[, labels.traits.continuous])[1, ],
   Biomass = cor(all.prairie.ordi$Biomass, all.prairie.ordi[, labels.traits.continuous])[1, ],
   lambda = prairie.phylosignal[labels.traits.continuous, 'lambda']
   )
