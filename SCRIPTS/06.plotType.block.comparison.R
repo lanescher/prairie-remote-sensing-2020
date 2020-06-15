@@ -128,7 +128,7 @@ BV <- ggplot(data = prairie.use.other,
   geom_boxplot(fill = "darkolivegreen4") +
   scale_x_discrete(limits = c("A", "B", "C", "D", "E", "F")) +
   theme_classic() +
-  labs(x = "block", y = expression(paste("volume (", m^2, ")"))) +
+  labs(x = "block", y = expression(paste("volume (", m^3, ")"))) +
   ylim(c(0, 4))
 
 #Removed 5 rows containing non-finite values (stat_boxplot).
@@ -137,7 +137,7 @@ MV <- ggplot(data = prairie.use.other,
   geom_boxplot(fill = c("goldenrod2", "cornflowerblue")) +
   scale_x_discrete(limits = c("Monoculture", "Treatment"), labels = c("Monoculture", "Treatment")) +
   theme_classic() +
-  labs(x = "plot type", y = expression(paste("volume (", m^2, ")"))) +
+  labs(x = "plot type", y = expression(paste("volume (", m^3, ")"))) +
   ylim(c(0, 4))
 
 # format and save figure
