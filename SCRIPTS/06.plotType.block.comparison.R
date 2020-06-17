@@ -69,7 +69,7 @@ write.csv(outTab, file = "../OUT/TABLE.SummaryStats.csv")
 MB <- ggplot(data = prairie.use.biomass,
              aes(x = prairie.use.biomass$Plot.category, y = prairie.use.biomass$biomass.all)) +
   geom_boxplot(fill = c("goldenrod2", "cornflowerblue")) +
-  scale_x_discrete(limits = c("Monoculture", "Treatment"), labels = c("Monoculture", "Treatment")) +
+  scale_x_discrete(limits = c("Monoculture", "Treatment"), labels = c("Monoculture", "Multispecies")) +
   theme_classic() +
   labs(x = "", y = "biomass (g)") +
   ylim(c(0, 4000))
@@ -97,7 +97,7 @@ BN <- ggplot(data = prairie.use.other,
 MN <- ggplot(data = prairie.use.other,
              aes(x = prairie.use.other$Plot.category, y = prairie.use.other$NDVI.CI)) + #chnaged from pNDVIvalues
   geom_boxplot(fill = c("goldenrod2", "cornflowerblue")) +
-  scale_x_discrete(limits = c("Monoculture", "Treatment"), labels = c("Monoculture", "Treatment")) +
+  scale_x_discrete(limits = c("Monoculture", "Treatment"), labels = c("Monoculture", "Multispecies")) +
   theme_classic() +
   labs(x = "", y = "NDVI") +
   ylim(c(0, 1))
@@ -116,7 +116,7 @@ BC <- ggplot(data = prairie.use.other,
 MC <- ggplot(data = prairie.use.other,
              aes(x = prairie.use.other$Plot.category, y = prairie.use.other$coverTotal)) +
   geom_boxplot(fill = c("goldenrod2", "cornflowerblue")) +
-  scale_x_discrete(limits = c("Monoculture", "Treatment")) +
+  scale_x_discrete(limits = c("Monoculture", "Treatment"), labels = c("Monoculture", "Multispecies")) +
   theme_classic() +
   labs(x = "", y = "planted cover (%)") +
   ylim(c(0, 100))
@@ -135,7 +135,7 @@ BV <- ggplot(data = prairie.use.other,
 MV <- ggplot(data = prairie.use.other,
              aes(x = prairie.use.other$Plot.category, y = prairie.use.other$VOL)) +
   geom_boxplot(fill = c("goldenrod2", "cornflowerblue")) +
-  scale_x_discrete(limits = c("Monoculture", "Treatment"), labels = c("Monoculture", "Treatment")) +
+  scale_x_discrete(limits = c("Monoculture", "Treatment"), labels = c("Monoculture", "Multispecies")) +
   theme_classic() +
   labs(x = "plot type", y = expression(paste("volume (", m^3, ")"))) +
   ylim(c(0, 4))
